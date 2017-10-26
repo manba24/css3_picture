@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<title>css制作多边形</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;	
+				list-style: none;
+				/*outline: 1px solid black;*/
+			}
+			body{
+				padding: 5px;
+			}
+			
+			.container ul li{
+				display: inline-block;
+				width: 200px;
+				height: 200px;
+				border: 1px solid gray;
+				vertical-align: top;
+				text-align: center;
+				transition: all 0.4s; 
+				margin: 10px;
+			}
+			.container ul li:hover{
+				box-shadow: 4px 4px 5px 4px gray inset;
+				transform:scale(0.9);
+			}
+			.love_list{
+				width: 100%;
+			}
+			.love{
+				margin: 50px auto;
+				height:100px ;
+				width: 100px;
+				/*border: 1px solid red;*/
+				transform: rotate(-45deg);
+				/*text-align: center;*/
+				background: red;
+				text-align: center;
+				transition: all 1s;
+			}
+			.love:after,.love:before{
+				content: '';
+				background: red;
+				/*border: 1px solid red;*/
+				height: 100px;
+				width: 100px;
+				position: absolute;
+				border-radius: 50%;
+			}
+		    .love:before {
+	           top: -50px;
+	           left: 0px;
+	        }
+	        .love:after{
+	        	top: 0px;
+	           left: 50px;
+	        }
+	        .three{
+	        	margin: 18px auto;
+	        	display: inline-block;
+	        	border:80px solid transparent;
+				border-bottom-color:red;
+				border-left-color:yellow;
+				border-right-color:green;
+				border-top-color:black;
+				transition: all 1s;
+				/*transform: rotate(45deg);*/
+	        }
+	        .ti_xing {
+	        	margin: 50px auto;
+			    border-bottom: 100px solid red;
+			    border-left: 50px solid transparent;
+			    border-right: 50px solid transparent;
+			    height: 0;
+			    width: 100px;
+			     transition: all 1s;
+			}
+			.circle{
+				height: 160px;
+				width: 160px;
+				border-radius: 50%;
+				background: red;
+				margin: 20px auto;
+				 transition: all 1s;
+			}
+			.tuo_yuan{
+				height: 160px;
+				width: 126px;
+				border-radius: 50%;
+				background: red;
+				margin: 20px auto;
+				 transition: all 1s;
+			}
+			.egg {
+				margin:20px auto;
+			    width: 126px;
+			    height: 160px;
+			    background-color: red;
+			    /*-webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;*/
+			    border-radius: 50%   50%  50%  50%  /60%   60%   40%  40%;
+			     transition: all 1s;
+			}
+			.eat{
+				margin: 18px auto;
+				display: inline-block;
+				border-top: 80px solid red;
+				border-left: 80px solid red;
+				border-bottom: 80px solid red;
+				border-right: 80px solid transparent;
+				border-radius:50% ;
+				 transition: all 1s;
+			}
+			.mention{
+				margin: 60px auto;
+				height: 80px;
+				width: 150px;
+				border-radius: 10px;
+				background: red;
+				position: relative;
+				transition: all 1s;
+			}
+			.mention:before{
+				content: '';
+				position: absolute;
+				border: 20px solid transparent;
+				border-right-color:red ;
+				top: 20px;
+				right: 100%;
+			}
+			.yin-yang {
+				margin: 30px auto;
+			    width: 140px;
+			    height: 68px;
+			    background: #eee;
+			    border-color: red;
+			    border-style: solid;
+			    border-width: 2px 2px 68px 2px;
+			    border-radius: 50%;
+			    position: relative;
+			    transition: all 1s;
+			}
+			.container ul li:hover dl dt div{
+			 	transform: rotate(360deg);
+			}
+			.yin-yang:before {
+			    content: "";
+			    position: absolute;
+			    top: 50%;
+			    left: 0;
+			    background: #eee;
+			    border: 24px solid red;
+			    border-radius: 100%;
+			    width: 22px;
+			    height: 22px;
+			}
+			 
+			.yin-yang:after {
+			    content: "";
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    background: red;
+			    border: 24px solid #eee;
+			    border-radius:100%;
+			    width: 22px;
+			    height: 22px;
+		    }
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<ul>
+				<li>
+					<dl class="love_list">
+						<dt><div class="love"></div></dt>
+						<dd>爱心</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><div class="three"></div></dt>
+						<dd>三角形</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><div class="ti_xing"></div></dt>
+						<dd>梯形</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><div class="circle"></div></dt>
+						<dd>圆形</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><div class="tuo_yuan"></div></dt>
+						<dd>椭圆形</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><div class="egg"></div></dt>
+						<dd>鸡蛋</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><div class="eat"></div></dt>
+						<dd>食人豆</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><div class="mention"></div></dt>
+						<dd>提示框</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><div class="yin-yang"></div></dt>
+						<dd>阴阳八卦图</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
